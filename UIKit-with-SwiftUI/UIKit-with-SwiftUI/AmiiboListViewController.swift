@@ -20,6 +20,8 @@ class AmiiboListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
+    title = "Amiibo List"
+    navigationController?.navigationBar.prefersLargeTitles = true
   }
   
   private func configureTableView() {
@@ -48,5 +50,11 @@ extension AmiiboListViewController: UITableViewDataSource {
   }
 }
 
+
+extension AmiiboListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+}
 
 
