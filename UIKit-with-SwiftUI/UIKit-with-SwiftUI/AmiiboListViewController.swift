@@ -27,7 +27,7 @@ class AmiiboListViewController: UIViewController {
     tableView.fillSuperview()
     tableView.dataSource = self
     tableView.register(AmiiboCell.self, forCellReuseIdentifier: AmiiboCell.reusableIdentifier)
-    tableView.estimatedRowHeight = 100
+    tableView.rowHeight = 100
   }
 
 
