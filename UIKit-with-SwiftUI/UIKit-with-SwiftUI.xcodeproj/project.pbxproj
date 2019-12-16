@@ -16,6 +16,7 @@
 		B5465B0D23A7F72400FF5522 /* AmiiboCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B0C23A7F72400FF5522 /* AmiiboCell.swift */; };
 		B5465B1023A7F7AE00FF5522 /* Amiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B0F23A7F7AE00FF5522 /* Amiibo.swift */; };
 		B5465B1323A8088300FF5522 /* AmiiboListViewControllerPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B1223A8088300FF5522 /* AmiiboListViewControllerPreviews.swift */; };
+		B5465B1523A844D400FF5522 /* AmiiboDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B5465B0C23A7F72400FF5522 /* AmiiboCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboCell.swift; sourceTree = "<group>"; };
 		B5465B0F23A7F7AE00FF5522 /* Amiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amiibo.swift; sourceTree = "<group>"; };
 		B5465B1223A8088300FF5522 /* AmiiboListViewControllerPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListViewControllerPreviews.swift; sourceTree = "<group>"; };
+		B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B5465B0C23A7F72400FF5522 /* AmiiboCell.swift */,
+				B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5465B1523A844D400FF5522 /* AmiiboDetailView.swift in Sources */,
 				B5465B1023A7F7AE00FF5522 /* Amiibo.swift in Sources */,
 				B5465B1323A8088300FF5522 /* AmiiboListViewControllerPreviews.swift in Sources */,
 				B5465AF923A7F34300FF5522 /* AmiiboListViewController.swift in Sources */,

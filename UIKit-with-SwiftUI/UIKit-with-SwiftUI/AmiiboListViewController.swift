@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AmiiboListViewController: UIViewController {
 
@@ -33,6 +34,12 @@ class AmiiboListViewController: UIViewController {
     tableView.rowHeight = 100
   }
 
+  private func sendToDetail() {
+    let detailView = AmiiboDetailView()
+    let hosting = UIHostingController(rootView: detailView)
+    
+    navigationController?.pushViewController(hosting, animated: true)
+  }
 
 }
 
@@ -54,7 +61,7 @@ extension AmiiboListViewController: UITableViewDataSource {
 
 extension AmiiboListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
+    sendToDetail()
   }
 }
 
