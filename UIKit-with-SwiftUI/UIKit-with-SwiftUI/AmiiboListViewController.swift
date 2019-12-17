@@ -34,8 +34,8 @@ class AmiiboListViewController: UIViewController {
     tableView.rowHeight = 100
   }
 
-  private func sendToDetail() {
-    let detailView = AmiiboDetailView()
+  private func sendToDetail(amiibo: Amiibo) {
+    let detailView = AmiiboDetailView(amiibo: amiibo)
     let hosting = UIHostingController(rootView: detailView)
     
     navigationController?.pushViewController(hosting, animated: true)
@@ -61,7 +61,7 @@ extension AmiiboListViewController: UITableViewDataSource {
 
 extension AmiiboListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    sendToDetail()
+    sendToDetail(amiibo: amiiboList[indexPath.row])
   }
 }
 

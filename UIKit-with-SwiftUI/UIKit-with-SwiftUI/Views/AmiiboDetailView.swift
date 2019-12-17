@@ -10,7 +10,23 @@ import Foundation
 import SwiftUI
 
 struct AmiiboDetailView: View {
+  
+  let amiibo: Amiibo
+  
   var body: some View {
-    Text("AmiiboDetailView")
+    VStack {
+      Image(amiibo.imageUrl)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .padding()
+      Text(amiibo.name)
+        .font(.largeTitle)
+    }
+  }
+}
+
+struct AmiiboDetailView_Previews: PreviewProvider {
+  static var previews: some View {
+    AmiiboDetailView(amiibo: Amiibo(name: "Link", price: 10, imageUrl: "Link") )
   }
 }
