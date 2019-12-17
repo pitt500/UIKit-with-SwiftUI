@@ -8,20 +8,26 @@
 
 import Foundation
 
-struct Amiibo {
+struct Amiibo: Codable {
   let name: String
-  let price: Double
+  let gameSeries: String
   let imageUrl: String
+  
+  private enum AmiiboKeys: String, CodingKey {
+    case name
+    case gameSeries
+    case imageUrl = "image"
+  }
 }
 
 extension Amiibo {
   static func all() -> [Amiibo] {
     return [
-      Amiibo(name: "Link", price: 29.0, imageUrl: "Link"),
-      Amiibo(name: "Waluigi", price: 55.0, imageUrl: "Waluigi"),
-      Amiibo(name: "Ryu", price: 14.0, imageUrl: "Ryu"),
-      Amiibo(name: "Samus", price: 35.0, imageUrl: "Samus"),
-      Amiibo(name: "Yoshi", price: 29.0, imageUrl: "Yoshi")
+      Amiibo(name: "Link", gameSeries: "Zelda", imageUrl: "Link"),
+      Amiibo(name: "Waluigi", gameSeries: "Super Mario", imageUrl: "Waluigi"),
+      Amiibo(name: "Ryu", gameSeries: "Street Fighter", imageUrl: "Ryu"),
+      Amiibo(name: "Samus", gameSeries: "Metroid", imageUrl: "Samus"),
+      Amiibo(name: "Yoshi", gameSeries: "Super Mario", imageUrl: "Yoshi")
     ]
   }
 }

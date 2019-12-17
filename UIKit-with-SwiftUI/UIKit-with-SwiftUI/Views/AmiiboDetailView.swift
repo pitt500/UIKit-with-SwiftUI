@@ -27,6 +27,6 @@ struct AmiiboDetailView: View {
 
 struct AmiiboDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    AmiiboDetailView(amiibo: Amiibo(name: "Link", price: 10, imageUrl: "Link") )
+    AmiiboDetailView(amiibo: Amiibo(name: "Link", gameSeries: "Zelda", imageUrl: "Link") )
   }
 }

@@ -22,7 +22,7 @@ class AmiiboCell: UITableViewCell {
     return label
   }()
   
-  private var priceLabel: UILabel = {
+  private var gameSeriesLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     label.textColor = .green
@@ -63,8 +63,8 @@ class AmiiboCell: UITableViewCell {
   }
 
   func setupPriceLabel() {
-    addSubview(priceLabel)
-    priceLabel.anchor(top: nameLabel.bottomAnchor,
+    addSubview(gameSeriesLabel)
+    gameSeriesLabel.anchor(top: nameLabel.bottomAnchor,
                          leading: nameLabel.leadingAnchor,
                          bottom: nil,
                          trailing: nameLabel.trailingAnchor,
@@ -74,7 +74,7 @@ class AmiiboCell: UITableViewCell {
   func configure(with amiibo: Amiibo) {
     amiiboImage.image = UIImage(named: amiibo.imageUrl)
     nameLabel.text = amiibo.name
-    priceLabel.text = "$\(amiibo.price)"
+    gameSeriesLabel.text = amiibo.gameSeries
   }
 }
 

@@ -17,6 +17,7 @@
 		B5465B1023A7F7AE00FF5522 /* Amiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B0F23A7F7AE00FF5522 /* Amiibo.swift */; };
 		B5465B1323A8088300FF5522 /* AmiiboListViewControllerPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B1223A8088300FF5522 /* AmiiboListViewControllerPreviews.swift */; };
 		B5465B1523A844D400FF5522 /* AmiiboDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */; };
+		B5465B1823A852E500FF5522 /* AmiiboService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B1723A852E500FF5522 /* AmiiboService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5465B0F23A7F7AE00FF5522 /* Amiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amiibo.swift; sourceTree = "<group>"; };
 		B5465B1223A8088300FF5522 /* AmiiboListViewControllerPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListViewControllerPreviews.swift; sourceTree = "<group>"; };
 		B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetailView.swift; sourceTree = "<group>"; };
+		B5465B1723A852E500FF5522 /* AmiiboService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		B5465AF323A7F34300FF5522 /* UIKit-with-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B5465B1623A852D200FF5522 /* Services */,
 				B5465B1123A807E700FF5522 /* UIKit Previews */,
 				B5465B0E23A7F79F00FF5522 /* Models */,
 				B5465B0B23A7F71400FF5522 /* Views */,
@@ -109,6 +112,14 @@
 				B5465B1223A8088300FF5522 /* AmiiboListViewControllerPreviews.swift */,
 			);
 			path = "UIKit Previews";
+			sourceTree = "<group>";
+		};
+		B5465B1623A852D200FF5522 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5465B1723A852E500FF5522 /* AmiiboService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				B5465B0A23A7F6E400FF5522 /* UIView+Autolayout.swift in Sources */,
 				B5465AF523A7F34300FF5522 /* AppDelegate.swift in Sources */,
 				B5465AF723A7F34300FF5522 /* SceneDelegate.swift in Sources */,
+				B5465B1823A852E500FF5522 /* AmiiboService.swift in Sources */,
 				B5465B0D23A7F72400FF5522 /* AmiiboCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
