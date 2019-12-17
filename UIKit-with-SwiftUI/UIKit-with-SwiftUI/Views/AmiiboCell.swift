@@ -26,7 +26,7 @@ class AmiiboCell: UITableViewCell {
   private var gameSeriesLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-    label.textColor = .green
+    label.textColor = .red
     return label
   }()
   
