@@ -12,7 +12,7 @@ import Combine
 
 class ImageLoader: ObservableObject {
   var downloadedImage: UIImage?
-  let didChange = PassthroughSubject<ImageLoader?, Never>()
+  let objectWillChange = ObservableObjectPublisher()
   
   func load(url: String) {
     guard let imageURL = URL(string: url) else {
@@ -21,15 +21,13 @@ class ImageLoader: ObservableObject {
     
     URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
       guard let data = data, error == nil else {
-        DispatchQueue.main.async {
-          self.didChange.send(nil)
-        }
+        print("Error loading image: \(url)")
         return
       }
       
-      self.downloadedImage = UIImage(data: data)
       DispatchQueue.main.async {
-        self.didChange.send(self)
+        self.downloadedImage = UIImage(data: data)
+        self.objectWillChange.send()
       }
     }.resume()
     
