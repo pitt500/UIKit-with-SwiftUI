@@ -16,13 +16,17 @@ class AmiiboListViewController: UIViewController {
     return table
   }()
   
-  private let amiiboList = Amiibo.all()
+  private let amiiboListViewModel = AmiiboListViewModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
     title = "Amiibo List"
     navigationController?.navigationBar.prefersLargeTitles = true
+    
+    amiiboListViewModel.getSmashAmiibos { [weak self] in
+      self?.tableView.reloadData()
+    }
   }
   
   private func configureTableView() {
@@ -45,7 +49,7 @@ class AmiiboListViewController: UIViewController {
 
 extension AmiiboListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return amiiboList.count
+    return amiiboListViewModel.numberOfAmiibos
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +57,9 @@ extension AmiiboListViewController: UITableViewDataSource {
       fatalError("Invalid Cell")
     }
     
-    cell.configure(with: amiiboList[indexPath.row])
+    let amiibo = amiiboListViewModel.amiibos[indexPath.row].amiibo
+    
+    cell.configure(with: amiibo)
     return cell
   }
 }
@@ -61,7 +67,9 @@ extension AmiiboListViewController: UITableViewDataSource {
 
 extension AmiiboListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    sendToDetail(amiibo: amiiboList[indexPath.row])
+    let amiibo = amiiboListViewModel.amiibos[indexPath.row].amiibo
+    
+    sendToDetail(amiibo: amiibo)
   }
 }
 

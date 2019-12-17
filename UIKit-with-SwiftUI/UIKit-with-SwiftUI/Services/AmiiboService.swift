@@ -35,15 +35,15 @@ class AmiiboService {
         return
       }
       
-      guard let data = data, let amiiboList = try? JSONDecoder().decode([Amiibo].self, from: data)  else {
+      guard let data = data, let amiiboList = try? JSONDecoder().decode(AmiiboResponse.self, from: data)  else {
         DispatchQueue.main.async {
           errorHandler(ServiceError.invalidFormat)
         }
         return
       }
-    
+      
       DispatchQueue.main.async {
-        completion(amiiboList)
+        completion(amiiboList.response)
       }
       
     }.resume()

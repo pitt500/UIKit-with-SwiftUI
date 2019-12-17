@@ -8,12 +8,20 @@
 
 import Foundation
 
-struct Amiibo: Codable {
+struct AmiiboResponse: Decodable {
+  let response: [Amiibo]
+  
+  private enum CodingKeys: String, CodingKey {
+    case response = "amiibo"
+  }
+}
+
+struct Amiibo: Decodable {
   let name: String
   let gameSeries: String
   let imageUrl: String
   
-  private enum AmiiboKeys: String, CodingKey {
+  private enum CodingKeys: String, CodingKey {
     case name
     case gameSeries
     case imageUrl = "image"
