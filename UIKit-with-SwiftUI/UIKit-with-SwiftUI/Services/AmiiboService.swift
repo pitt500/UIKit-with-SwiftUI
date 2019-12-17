@@ -16,7 +16,7 @@ enum ServiceError: Error {
 class AmiiboService {
   private let baseUrl = "https://www.amiiboapi.com/api/amiibo/"
   
-  func getSmashAmiibos(completion: @escaping ([Amiibo]) -> Void, errorHandler: @escaping (Error?) -> Void) {
+  func getSmashAmiibos(completion: @escaping ([Amiibo]) -> Void, errorHandler: @escaping (Error) -> Void) {
     guard var parametersUrl = URLComponents(string: baseUrl) else {
       fatalError("Invalid URL")
     }
