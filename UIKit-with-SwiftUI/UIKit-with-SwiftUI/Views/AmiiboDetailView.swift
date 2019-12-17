@@ -15,10 +15,10 @@ struct AmiiboDetailView: View {
   
   var body: some View {
     VStack {
-      Image(amiibo.imageUrl)
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .padding()
+      URLImage(url: amiibo.imageUrl)
+//        .resizable()
+//        .aspectRatio(contentMode: .fit)
+//        .padding()
       Text(amiibo.name)
         .font(.largeTitle)
     }
@@ -27,6 +27,6 @@ struct AmiiboDetailView: View {
 
 struct AmiiboDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    AmiiboDetailView(amiibo: Amiibo(name: "Link", gameSeries: "Zelda", imageUrl: "Link") )
+    AmiiboDetailView(amiibo: Amiibo(name: "Link", gameSeries: "Zelda", imageUrl: "https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01000000-037c0002.png") )
   }
 }
