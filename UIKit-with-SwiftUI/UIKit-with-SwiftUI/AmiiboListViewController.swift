@@ -58,9 +58,16 @@ extension AmiiboListViewController: UITableViewDataSource {
     }
     
     let amiibo = amiiboListViewModel.amiibos[indexPath.row].amiibo
-    
     cell.configure(with: amiibo)
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    guard let amiiboCell = cell as? AmiiboCell else {
+      return
+    }
+    let amiibo = amiiboListViewModel.amiibos[indexPath.row].amiibo
+    amiiboCell.imageView?.cancelLoadingImage(stringUrl: amiibo.imageUrl)
   }
 }
 

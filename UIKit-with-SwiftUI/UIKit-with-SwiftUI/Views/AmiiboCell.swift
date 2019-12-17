@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AmiiboCell: UITableViewCell {
   
@@ -72,7 +73,7 @@ class AmiiboCell: UITableViewCell {
   }
   
   func configure(with amiibo: Amiibo) {
-    amiiboImage.image = UIImage(named: amiibo.imageUrl)
+    amiiboImage.loadImage(stringUrl: amiibo.imageUrl)
     nameLabel.text = amiibo.name
     gameSeriesLabel.text = amiibo.gameSeries
   }
