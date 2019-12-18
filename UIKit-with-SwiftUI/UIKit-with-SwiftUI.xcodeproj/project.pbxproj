@@ -24,6 +24,7 @@
 		B5465B2123A874DF00FF5522 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2023A874DF00FF5522 /* UIImageView+LoadImage.swift */; };
 		B5465B2323A8A12300FF5522 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2223A8A12300FF5522 /* URLImage.swift */; };
 		B5465B2623A9A97600FF5522 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2523A9A97600FF5522 /* StarView.swift */; };
+		B5465B2923A9AA1300FF5522 /* StarViewRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2823A9AA1300FF5522 /* StarViewRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B5465B2023A874DF00FF5522 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		B5465B2223A8A12300FF5522 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		B5465B2523A9A97600FF5522 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		B5465B2823A9AA1300FF5522 /* StarViewRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		B5465B0B23A7F71400FF5522 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5465B2723A9AA0000FF5522 /* View Representations */,
 				B5465B2423A9A96000FF5522 /* Custom Views */,
 				B5465B0C23A7F72400FF5522 /* AmiiboCell.swift */,
 				B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */,
@@ -154,6 +157,14 @@
 				B5465B2523A9A97600FF5522 /* StarView.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B5465B2723A9AA0000FF5522 /* View Representations */ = {
+			isa = PBXGroup;
+			children = (
+				B5465B2823A9AA1300FF5522 /* StarViewRepresentation.swift */,
+			);
+			path = "View Representations";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 				B5465AF723A7F34300FF5522 /* SceneDelegate.swift in Sources */,
 				B5465B1823A852E500FF5522 /* AmiiboService.swift in Sources */,
 				B5465B0D23A7F72400FF5522 /* AmiiboCell.swift in Sources */,
+				B5465B2923A9AA1300FF5522 /* StarViewRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
