@@ -23,6 +23,7 @@
 		B5465B1F23A8710C00FF5522 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B1E23A8710C00FF5522 /* ImageLoader.swift */; };
 		B5465B2123A874DF00FF5522 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2023A874DF00FF5522 /* UIImageView+LoadImage.swift */; };
 		B5465B2323A8A12300FF5522 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2223A8A12300FF5522 /* URLImage.swift */; };
+		B5465B2623A9A97600FF5522 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465B2523A9A97600FF5522 /* StarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B5465B1E23A8710C00FF5522 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B5465B2023A874DF00FF5522 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		B5465B2223A8A12300FF5522 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		B5465B2523A9A97600FF5522 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		B5465B0B23A7F71400FF5522 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5465B2423A9A96000FF5522 /* Custom Views */,
 				B5465B0C23A7F72400FF5522 /* AmiiboCell.swift */,
 				B5465B1423A844D400FF5522 /* AmiiboDetailView.swift */,
 				B5465B2223A8A12300FF5522 /* URLImage.swift */,
@@ -143,6 +146,14 @@
 				B5465B1C23A8656C00FF5522 /* AmiiboListViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B5465B2423A9A96000FF5522 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5465B2523A9A97600FF5522 /* StarView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				B5465B1D23A8656C00FF5522 /* AmiiboListViewModel.swift in Sources */,
 				B5465B1523A844D400FF5522 /* AmiiboDetailView.swift in Sources */,
 				B5465B1F23A8710C00FF5522 /* ImageLoader.swift in Sources */,
+				B5465B2623A9A97600FF5522 /* StarView.swift in Sources */,
 				B5465B1B23A864F500FF5522 /* AmiiboViewModel.swift in Sources */,
 				B5465B2123A874DF00FF5522 /* UIImageView+LoadImage.swift in Sources */,
 				B5465B1023A7F7AE00FF5522 /* Amiibo.swift in Sources */,
