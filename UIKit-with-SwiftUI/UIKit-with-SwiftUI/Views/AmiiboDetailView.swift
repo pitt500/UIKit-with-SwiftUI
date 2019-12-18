@@ -12,15 +12,25 @@ import SwiftUI
 struct AmiiboDetailView: View {
   
   let amiibo: Amiibo
+  @State private var selected = false
   
   var body: some View {
     VStack {
+      
+      HStack {
+        Spacer()
+        StarViewRepresentation(selected: $selected)
+          .frame(width: 35, height: 35)
+          .padding()
+      }
+      Spacer()
       URLImage(url: amiibo.imageUrl)
 //        .resizable()
 //        .aspectRatio(contentMode: .fit)
 //        .padding()
       Text(amiibo.name)
         .font(.largeTitle)
+      Spacer()
     }
   }
 }
